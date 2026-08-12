@@ -7,6 +7,22 @@ app = Flask(__name__)
 
 
 @app.route("/")
+def start():
+    return render_template("login.html")
+
+@app.route("/login", methods=["POST"])
+def login():
+    if request.method == "POST":
+
+        Name = request.form.get("name")
+        Username = request.form.get("username")
+        Password = request.form.get("password")
+
+        if Username == 'admin' and Password == "1234":
+            return render_template('home.html')
+
+
+@app.route("/home")
 def home():
     return render_template("home.html")
 
