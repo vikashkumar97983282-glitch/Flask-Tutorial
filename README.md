@@ -38,5 +38,5 @@ Through this project, I am learning:
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-repository.git
+git clone https://github.com/vikashkumar97983282-glitch/Flask-Tutorial.git
 cd your-repository
