@@ -1,16 +1,19 @@
-from flask import Flask, request, Response, url_for, redirect, render_template
+from flask import Flask, request, session, Response, url_for, redirect, render_template,flash
 from form import RegistrationForm
 
 
 
 app = Flask(__name__)
 
+app.secret_key = "my-secret-key"
+
+
 
 @app.route("/")
 def start():
     return render_template("login.html")
 
-@app.route("/login", methods=["POST"])
+@app.route("/login", methods=["GET","POST"])
 def login():
     if request.method == "POST":
 
@@ -20,6 +23,10 @@ def login():
 
         if Username == 'admin' and Password == "1234":
             return render_template('home.html')
+        else:
+            flash("Invalid credetials")
+            return render_template('login.html')
+    
 
 
 @app.route("/home")
