@@ -12,7 +12,7 @@ body {
 
 
 header{
-    background:  linear-gradient(to_right, #0062E6,#33AeFF);
+    background:  linear-gradient(to right, #0062E6,#33AeFF);
     color: white;
     padding: 20px 0;
     box-shadow: 0 20px 8px rgba(0, 0, 0, 0.1);
@@ -54,6 +54,7 @@ footer{
 
 footer p{
     margin: 0;
+    color: yellow;
 }
 
 .flash.success{ color: green; }

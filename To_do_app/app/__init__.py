@@ -12,10 +12,10 @@ def create_app():
     app = Flask(__name__)
 
     app.config['SECRET_KEY'] = 'MY-SECRET-KEY'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqllite:///todo.db'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db'
     app.config['SQLALCHEMY_TRACK_MODIFICTIONS'] = False
 
-    db.__init__(app)
+    db.init_app(app)
 
     from app.routes import auth_bp
     from app.routes import tasks_bp
