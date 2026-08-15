@@ -1,13 +1,318 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>home</title>
-</head>
-<body>
-    <header>
-        <h1>this is home page</h1>
-    </header>
-</body>
-</html>
+{% extends 'base.html' %}
+
+{% block title %} Home {% endblock %}
+
+{% block content %}
+<main>
+
+        <!-- Hero Section -->
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <p class="hero-label">MACHINE LEARNING PROJECT</p>
+
+                    <h2>
+                        Predict Your
+                        <span>Placement Chances</span>
+                    </h2>
+
+                    <p class="hero-description">
+                        Discover your placement probability using our
+                        machine-learning-based prediction system.
+                        Analyze your academic performance, skills,
+                        experience, and other important factors.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="{{ url_for('predict.predict') }}" class="btn btn-primary">
+                            Predict My Placement
+                        </a>
+
+                        <a href="#" class="btn btn-secondary">
+                            Learn More
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-card">
+
+                    <div class="prediction-icon">
+                        🎓
+                    </div>
+
+                    <h3>Placement Prediction</h3>
+
+                    <p>
+                        Enter your details and let our machine learning
+                        model estimate your placement outcome.
+                    </p>
+
+                    <div class="prediction-stats">
+
+                        <div>
+                            <strong>AI</strong>
+                            <span>Powered</span>
+                        </div>
+
+                        <div>
+                            <strong>ML</strong>
+                            <span>Model</span>
+                        </div>
+
+                        <div>
+                            <strong>Easy</strong>
+                            <span>To Use</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- About Section -->
+        <section class="about-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">ABOUT THE PROJECT</p>
+
+                <h2>What is Placement Prediction?</h2>
+
+                <p>
+                    Placement Prediction is a machine learning application
+                    designed to estimate whether a student is likely to
+                    get placed based on important academic and
+                    career-related factors.
+                </p>
+
+            </div>
+
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">📊</div>
+
+                    <h3>Analyze Your Profile</h3>
+
+                    <p>
+                        Analyze academic performance, skills, internships,
+                        experience, and other relevant student information.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">🎯</div>
+
+                    <h3>Get a Prediction</h3>
+
+                    <p>
+                        Our machine learning model processes your information
+                        and provides an estimated placement outcome.
+                    </p>
+
+                </div>
+
+
+                <div class="feature-card">
+
+                    <div class="feature-icon">💡</div>
+
+                    <h3>Improve Your Chances</h3>
+
+                    <p>
+                        Understand the important factors affecting placement
+                        and identify areas where you can improve.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- How It Works -->
+        <section class="how-section">
+
+            <div class="section-heading">
+
+                <p class="section-label">SIMPLE PROCESS</p>
+
+                <h2>How It Works</h2>
+
+                <p>
+                    Get your placement prediction in just three simple steps.
+                </p>
+
+            </div>
+
+
+            <div class="steps-container">
+
+                <div class="step">
+
+                    <div class="step-number">01</div>
+
+                    <h3>Enter Your Details</h3>
+
+                    <p>
+                        Provide your academic details, skills,
+                        internships, and other required information.
+                    </p>
+
+                </div>
+
+
+                <div class="step-arrow">
+                    →
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">02</div>
+
+                    <h3>Analyze Your Profile</h3>
+
+                    <p>
+                        The machine learning model analyzes the information
+                        provided by you.
+                    </p>
+
+                </div>
+
+
+                <div class="step-arrow">
+                    →
+                </div>
+
+
+                <div class="step">
+
+                    <div class="step-number">03</div>
+
+                    <h3>Get Your Prediction</h3>
+
+                    <p>
+                        Receive an estimated placement prediction based
+                        on your profile.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Benefits Section -->
+        <section class="benefits-section">
+
+            <div class="benefits-container">
+
+                <div class="benefits-text">
+
+                    <p class="section-label">WHY USE IT?</p>
+
+                    <h2>Prepare Smarter for Your Career</h2>
+
+                    <p>
+                        Placement prediction can help students understand
+                        their current profile and focus on the areas that
+                        matter most for their placement preparation.
+                    </p>
+
+                    <ul class="benefits-list">
+
+                        <li>
+                            <span>✓</span>
+                            Understand your placement profile
+                        </li>
+
+                        <li>
+                            <span>✓</span>
+                            Identify areas for improvement
+                        </li>
+
+                        <li>
+                            <span>✓</span>
+                            Make better career decisions
+                        </li>
+
+                        <li>
+                            <span>✓</span>
+                            Prepare effectively for placements
+                        </li>
+
+                        <li>
+                            <span>✓</span>
+                            Use data-driven insights
+                        </li>
+
+                    </ul>
+
+                </div>
+
+
+                <div class="benefits-card">
+
+                    <div class="large-icon">
+                        🚀
+                    </div>
+
+                    <h3>Start Your Journey</h3>
+
+                    <p>
+                        Take the first step toward understanding your
+                        placement potential.
+                    </p>
+
+                    <a href="{{ url_for('predict.predict') }}" class="btn btn-primary">
+                        Start Prediction
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Final CTA -->
+        <section class="cta-section">
+
+            <div class="cta-content">
+
+                <h2>Ready to Check Your Placement Chances?</h2>
+
+                <p>
+                    Enter your details and get your placement prediction today.
+                </p>
+
+                <a href="{{ url_for('predict.predict') }}" class="cta-button">
+                    Get Started →
+                </a>
+
+            </div>
+
+        </section>
+
+    </main>
+
+{% endblock %}
