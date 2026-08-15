@@ -15,6 +15,7 @@ def create_app():
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///todo.db'
     app.config['SQLALCHEMY_TRACK_MODIFICTIONS'] = False
 
+    # database connection
     db.init_app(app)
 
     from app.routes import auth_bp
