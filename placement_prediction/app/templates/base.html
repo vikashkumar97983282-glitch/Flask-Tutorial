@@ -9,14 +9,13 @@
 <body>
     <header>
         <div class="container">
-            <h1>My To Do App</h1>
+            <h1> PLACEMENT PREDICTION </h1>
             <nav>
-                <a href="{{url_for('tasks.view_tasks')}}">Home</a>
-                {% if 'user' in session %}
-                    <a href="{{ url_for('auth.logout') }}">Logout</a>
-                {% else %}
-                    <a href="{{ url_for('auth.login') }}">Login</a>
-                {% endif %}
+                <a href="{{url_for('home.home')}}">Home</a>
+                <a href="{{ url_for('about.about') }}">About</a>
+                <a href="{{ url_for('predict.predict') }}">Predict</a>
+                <a href="{{ url_for('content.content') }}">Content</a>
+                <a href="{{ url_for('developer.developer') }}">Developer</a>
             </nav>
         </div>
     </header>
@@ -31,7 +30,7 @@
     </main>
     <footer>
         <div class="container">
-            <p>&copy; {{2025}} My Flask To Do App</p>
+            <p>&copy; {{2026}} Placement Prediction | Machine Learning Project</p>
         </div>
     </footer>
 </body>
